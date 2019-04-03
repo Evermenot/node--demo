@@ -11,6 +11,12 @@ server.on('request', (req, res) => {
     const method = req.method.toLowerCase() ;
     // console.log(url, method)
     if(url === '/index.html' && method === 'get') {
+        /**
+         * url只是资源路径 `标识符`，url不一定非要对应实际的物理磁盘路径
+         * 因此在引用资源时，推荐使用绝对路径
+         * <link rel="stylesheet" href="/style.css">
+         * path.join(__dirname, '/assets/style.css')
+         */
         fs.readFile(path.join(__dirname, '../01.files/index.html'), (err, data) => {
             res.end(data);
         });
