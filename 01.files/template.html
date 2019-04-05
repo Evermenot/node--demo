@@ -10,10 +10,10 @@
     <h1>模板页面</h1>
     <hr />
     <h3>爱好：</h3>
-    <% hobby.forEach(item => { %>
+    {{ each hobby}}
         <p>
-            <%= item %>
+            {{ $value + '22' }}
         </p>
-    <% }) %>
+    {{ /each }}
 </body>
 </html>
