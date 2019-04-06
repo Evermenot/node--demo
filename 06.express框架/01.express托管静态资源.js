@@ -11,6 +11,9 @@ app.use(express.static('./statics'));
  * 
  * 使用express.static()托管的静态资源文件目录，
  * 被托管的静态资源文件目录不应该出现在资源访问的URL地址中；
+ * 解决：
+ *  app.use('/statics', express.static('./statics'));
+ *  在use第一个参数位置手动挂载静态资源路径
  */
 
 //启动服务
