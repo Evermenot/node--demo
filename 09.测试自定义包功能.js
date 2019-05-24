@@ -6,3 +6,9 @@
 */
 const calc = require('./自定义包');
 console.log(calc.add(2,3));
+
+
+
+/**
+ * 测试测试测试测试git命令
+ */
